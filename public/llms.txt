@@ -1,0 +1,55 @@
+# טבע, נשימה, מים — Generative Engine Optimization Map
+
+> A טיפול ורווחה נפשית business.
+
+---
+
+## Pages
+
+### Home
+https://-64739530.zappy5.app
+
+### Services
+https://-64739530.zappy5.app/services
+
+### About
+https://-64739530.zappy5.app/about
+
+### Contact
+https://-64739530.zappy5.app/contact
+
+## Legal & Policy
+
+### Privacy Policy
+https://-64739530.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-64739530.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-64739530.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About טבע, נשימה, מים
+טבע, נשימה, מים is a business in the טיפול ורווחה נפשית industry.
+
+## Target Audience
+- אנשי מקצוע לחוצים עירוניים
+- הורים לילדים עם צרכים מיוחדים
+- משתתפי ריטריטים מחפשי בריאות
+
+## Industry
+טיפול ורווחה נפשית
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-64739530.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-64739530.zappy5.app/robots.txt
