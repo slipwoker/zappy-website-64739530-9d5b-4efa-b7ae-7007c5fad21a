@@ -1,6 +1,4 @@
-# טבע, נשימה, מים — Generative Engine Optimization Map
-
-> A טיפול ורווחה נפשית business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -36,17 +34,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About טבע, נשימה, מים
-טבע, נשימה, מים is a business in the טיפול ורווחה נפשית industry.
-
-## Target Audience
-- אנשי מקצוע לחוצים עירוניים
-- הורים לילדים עם צרכים מיוחדים
-- משתתפי ריטריטים מחפשי בריאות
-
-## Industry
-טיפול ורווחה נפשית
-
+## About Business
 ---
 
 # Additional Resources
