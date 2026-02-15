@@ -1,43 +1,55 @@
-# Business — Generative Engine Optimization Map
+# טבע, נשימה, מים — Generative Engine Optimization Map
+
+> A טיפול ורווחה נפשית business.
 
 ---
 
 ## Pages
 
 ### Home
-https://example.com
+https://nature-neshima-mayim.zappy5.app
 
 ### Services
-https://example.com/services
+https://nature-neshima-mayim.zappy5.app/services
 
 ### About
-https://example.com/about
+https://nature-neshima-mayim.zappy5.app/about
 
 ### Contact
-https://example.com/contact
+https://nature-neshima-mayim.zappy5.app/contact
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://nature-neshima-mayim.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://nature-neshima-mayim.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://nature-neshima-mayim.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About טבע, נשימה, מים
+טבע, נשימה, מים is a business in the טיפול ורווחה נפשית industry.
+
+## Target Audience
+- אנשי מקצוע לחוצים עירוניים
+- הורים לילדים עם צרכים מיוחדים
+- משתתפי ריטריטים מחפשי בריאות
+
+## Industry
+טיפול ורווחה נפשית
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://nature-neshima-mayim.zappy5.app/sitemap.xml
+- **Robots.txt**: https://nature-neshima-mayim.zappy5.app/robots.txt
