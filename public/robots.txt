@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nature-neshima-mayim.zappy5.app/sitemap.xml
+Sitemap: https://levateva.com/sitemap.xml

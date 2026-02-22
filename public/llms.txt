@@ -5,29 +5,29 @@
 ## Pages
 
 ### Home
-https://nature-neshima-mayim.zappy5.app
+https://levateva.com
 
 ### Services
-https://nature-neshima-mayim.zappy5.app/services
+https://levateva.com/services
 
 ### About
-https://nature-neshima-mayim.zappy5.app/about
+https://levateva.com/about
 
 ### Contact
-https://nature-neshima-mayim.zappy5.app/contact
+https://levateva.com/contact
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://nature-neshima-mayim.zappy5.app/privacy
+https://levateva.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://nature-neshima-mayim.zappy5.app/terms
+https://levateva.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://nature-neshima-mayim.zappy5.app/accessibility
+https://levateva.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -39,5 +39,5 @@ Information about WCAG compliance and accessibility features.
 
 # Additional Resources
 
-- **Sitemap**: https://nature-neshima-mayim.zappy5.app/sitemap.xml
-- **Robots.txt**: https://nature-neshima-mayim.zappy5.app/robots.txt
+- **Sitemap**: https://levateva.com/sitemap.xml
+- **Robots.txt**: https://levateva.com/robots.txt
