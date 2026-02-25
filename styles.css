@@ -5980,9 +5980,8 @@ small, .small-text {
     max-width: 100% !important;
   }
   
-  /* Featured/product grids - force single column on mobile */
-  .featured-grid,
-  .product-grid {
+  /* Featured grids - force single column on mobile */
+  .featured-grid {
     grid-template-columns: 1fr !important;
   }
   
