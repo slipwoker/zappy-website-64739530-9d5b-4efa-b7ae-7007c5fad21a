@@ -5956,9 +5956,10 @@ small, .small-text {
   position: relative !important;
 }
 
-/* Prevent inserted elements from exceeding their container width */
+/* Prevent inserted elements from exceeding their container width.
+   max-width uses no !important so inline styles can set a specific constraint. */
 .zappy-inserted-element {
-  max-width: 100% !important;
+  max-width: 100%;
   box-sizing: border-box !important;
 }
 
