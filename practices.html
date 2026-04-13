@@ -258,8 +258,8 @@
       .sub-menu a:hover { background-color: #f5f5f5; }
       /* RTL (Hebrew/Arabic) dropdown positioning */
       [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
-      /* Hide empty dropdown menus */
-      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Hide empty dropdown menus (exclude catalog sub-menus that use <a> children instead of <li>) */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))):not(:has(> a)), .sub-menu:not(:has(li)):not(:has(> a)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
       /* Desktop: show submenu on Menu Group hover */
       li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
       /* Menu Group title styling */
@@ -268,7 +268,7 @@
       /* ========== MOBILE SUBMENU STYLES ========== */
       @media (max-width: 768px) {
         .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
-        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        .sub-menu.mobile-expanded { max-height: 60vh !important; overflow-y: auto !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
         [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
         /* Disable hover behavior on mobile */
         .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
@@ -317,7 +317,7 @@
   <div class="nav-container">
     <div class="nav-brand">
       <a href="/" class="logo-link" data-nav-menu-item="true">
-        <img src="/assets/logo-1773571074328-aaohd5.webp?v=1773571074688-r6ija1" alt="לב הטבע" class="logo zappy-editable-image" data-image-type="logo" data-original-position="static" style="position: relative;">
+        <img src="/assets/logo-1773571074328-aaohd5.webp?v=1773571074688-r6ija1" alt="לב הטבע" class="logo" data-image-type="logo" >
       </a>
     </div>
     
@@ -347,15 +347,15 @@
       <h1>פרקטיקות</h1>
       
     </div>
-    <div class="services-page-intro-keypoints zappy-preserve-css-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));" data-original-item-width="434" data-original-gap="32px" id="zappy-auto-grid-1772037111947-o0nzdx" data-zappy-auto-grid="true" data-zappy-explicit-columns="true"><div class="services-page-intro-keypoint" style="background-color: rgba(0, 0, 0, 0) !important; padding: 24px 20px !important; box-sizing: border-box;">
-        <h2 class="zappy-editable zappy-inline-editing" style="outline: none;">חשיפה לקור</h2>
-        <p class="zappy-editable" style="cursor: text;">מפגש מודרך עם אמבטיית קרח, באופן פרטני, זוגי או קבוצתי. מועיל בהתמודדות עם מצבי לחץ ושיפור מסוגלות אישית&nbsp;</p>
+    <div class="services-page-intro-keypoints zappy-preserve-css-grid" style="--zappy-grid-cols: repeat(3, minmax(0, 1fr)); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));" data-original-item-width="434" data-original-gap="32px" id="zappy-auto-grid-1772037111947-o0nzdx" data-zappy-auto-grid="true" data-zappy-explicit-columns="true"><div class="services-page-intro-keypoint" style="background-color: rgba(0, 0, 0, 0) !important; padding: 24px 20px !important; box-sizing: border-box;">
+        <h2 class="zappy-editable" style="outline: none;">חשיפה לקור</h2>
+        <p class="zappy-editable" >מפגש מודרך עם אמבטיית קרח, באופן פרטני, זוגי או קבוצתי. מועיל בהתמודדות עם מצבי לחץ ושיפור מסוגלות אישית&nbsp;</p>
       </div><div class="services-page-intro-keypoint">
-        <h3 class="" style=""></h3><h2 class="zappy-editable" style="">טבע תרפיה</h2>
-        <p class="zappy-editable" style="">מפגשים אישיים וסדנאות במרחב טבעי, מוחזק ונעים. כולנו טבע ובטבע בכולנו, ניעזר בו ובנוכחות שלו לעבודת גוף-נפש-טבע.</p>
-      </div><div class="services-page-intro-keypoint" style="">
-        <h3 class="" style=""></h3><h2 class="zappy-editable">נשימה מודעת</h2>
-        <p class="zappy-editable" style="">מגוון שיטות של נשימה מודרכת, טכניקות ותרגולים. נשימה טובה לקרקוע, חיזוק פנימי, שיקוף והקלה</p>
+        <h3 class="" ></h3><h2 class="zappy-editable" >טבע תרפיה</h2>
+        <p class="zappy-editable" >מפגשים אישיים וסדנאות במרחב טבעי, מוחזק ונעים. כולנו טבע ובטבע בכולנו, ניעזר בו ובנוכחות שלו לעבודת גוף-נפש-טבע.</p>
+      </div><div class="services-page-intro-keypoint" >
+        <h3 class="" ></h3><h2 class="zappy-editable">נשימה מודעת</h2>
+        <p class="zappy-editable" >מגוון שיטות של נשימה מודרכת, טכניקות ותרגולים. נשימה טובה לקרקוע, חיזוק פנימי, שיקוף והקלה</p>
       </div></div>
   </div>
 </section>
@@ -366,10 +366,10 @@
 <section id="layout-1772037140739" class="layout-section" data-zappy-component="true" style="width: 100%; padding: 60px 0px; direction: rtl;" data-component-id="image-grid-3">
   <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
   
-  <div class="three-image-grid zappy-preserve-css-grid" style="display: grid; grid-template-columns: 367.331px 367.331px 367.35px 0px; gap: 25px;" id="zappy-auto-grid-1772037140868-s8oapm" data-zappy-auto-grid="true" data-original-item-width="367" data-original-gap="25px">
-    <div data-zappy-media-grid-item="true" class="zappy-grid-item-media-only" style="position: relative; display: block; overflow: hidden !important; height: 314.861px !important;" data-zappy-original-height="314.8687438964844"><div data-zappy-zoom-wrapper="true" data-element-id="img-1772037140867-33pfmwche" data-element-type="image" data-zappy-zoom-wrapper-width="367px" data-zappy-zoom-wrapper-height="315px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 367px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 315px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="layout-image-1772037140739-ruuexmrmv" data-context="תיאור תמונה 1" data-zappy-editable-image="true" src="/assets/business-general-service-upload-1773134812795.webp" alt="תיאור תמונה 1" style="display: block; border-radius: 8px; object-position: 50% 50%; width: 144.19% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; margin-top: 0px !important; margin-bottom: 0px !important; position: absolute !important; left: -22.0951% !important; top: 0% !important; max-height: none !important" class="layout-placeholder-image zappy-editable-image" data-element-type="image" data-element-id="img-1772037140867-33pfmwche" data-zappy-original-width="367.3124694824219" data-zappy-original-height="314.83123779296875" data-zappy-zoom="1"></div></div>
-    <div data-zappy-media-grid-item="true" class="zappy-grid-item-media-only" style="position: relative; display: block; overflow: hidden !important; height: 314.869px !important;" data-zappy-original-height="314.8687438964844"><div data-zappy-zoom-wrapper="true" data-element-id="img-1772037140867-i28lkhj3e" data-element-type="image" data-zappy-zoom-wrapper-width="367px" data-zappy-zoom-wrapper-height="315px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 367px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 315px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="layout-image-1772037140739-bht46pw9y" data-context="תיאור תמונה 2" data-zappy-editable-image="true" src="/assets/business-general-service-upload-1772037176608.webp" alt="תיאור תמונה 2" style="display: block !important; border-radius: 8px; object-position: 50% 50%; width: 190.736% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; margin: 0px !important; position: absolute !important; left: -45.3678% !important; top: 0% !important; max-height: none !important" class="layout-placeholder-image zappy-editable-image" data-element-type="image" data-element-id="img-1772037140867-i28lkhj3e" data-zappy-original-width="367.3124694824219" data-zappy-original-height="314.83123779296875" data-zappy-zoom="1"></div></div>
-    <div data-zappy-media-grid-item="true" class="zappy-grid-item-media-only" style="position: relative; display: block; overflow: hidden !important; height: 314.869px !important;" data-zappy-original-height="314.8687438964844"><div data-zappy-zoom-wrapper="true" data-element-id="img-1772037140867-n71jyk0bz" data-element-type="image" data-zappy-zoom-wrapper-width="367px" data-zappy-zoom-wrapper-height="315px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 367px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 315px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="layout-image-1772037140739-dfohkcu4p" data-context="תיאור תמונה 3" data-zappy-editable-image="true" src="/assets/business-general-service-upload-1772037159967.webp" alt="תיאור תמונה 3" style="display: block !important; border-radius: 8px; object-position: 50% 50%; width: 114.441% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; margin: 0px !important; position: absolute !important; left: -7.22071% !important; top: 0% !important; max-height: none !important" class="layout-placeholder-image zappy-editable-image" data-element-type="image" data-element-id="img-1772037140867-n71jyk0bz" data-zappy-original-width="367.3499755859375" data-zappy-original-height="314.8687438964844" data-zappy-zoom="1"></div></div>
+  <div class="three-image-grid zappy-preserve-css-grid" style="--zappy-grid-cols: 367.331px 367.331px 367.35px 0px; display: grid; grid-template-columns: 367.331px 367.331px 367.35px 0px; gap: 25px;" id="zappy-auto-grid-1772037140868-s8oapm" data-zappy-auto-grid="true" data-original-item-width="367" data-original-gap="25px" data-zappy-explicit-columns="true">
+    <div data-zappy-media-grid-item="true" class="zappy-grid-item-media-only" style="position: relative; display: block; overflow: hidden !important; height: 314.861px !important;" data-zappy-original-height="314.8687438964844"><div data-zappy-zoom-wrapper="true" data-element-id="img-1772037140867-33pfmwche" data-element-type="image" data-zappy-zoom-wrapper-width="367px" data-zappy-zoom-wrapper-height="315px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 367px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 315px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="layout-image-1772037140739-ruuexmrmv" data-context="תיאור תמונה 1" src="/assets/business-general-service-upload-1773134812795.webp" alt="תיאור תמונה 1" style="display: block; border-radius: 8px; object-position: 50% 50%; width: 144.19% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; margin-top: 0px !important; margin-bottom: 0px !important; position: absolute !important; left: -22.0951% !important; top: 0% !important; max-height: none !important" class="layout-placeholder-image" data-element-type="image" data-element-id="img-1772037140867-33pfmwche" data-zappy-original-width="367.3124694824219" data-zappy-original-height="314.83123779296875" data-zappy-zoom="1"></div></div>
+    <div data-zappy-media-grid-item="true" class="zappy-grid-item-media-only" style="position: relative; display: block; overflow: hidden !important; height: 314.869px !important;" data-zappy-original-height="314.8687438964844"><div data-zappy-zoom-wrapper="true" data-element-id="img-1772037140867-i28lkhj3e" data-element-type="image" data-zappy-zoom-wrapper-width="367px" data-zappy-zoom-wrapper-height="315px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 367px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 315px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="layout-image-1772037140739-bht46pw9y" data-context="תיאור תמונה 2" src="/assets/business-general-service-upload-1772037176608.webp" alt="תיאור תמונה 2" style="display: block !important; border-radius: 8px; object-position: 50% 50%; width: 190.736% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; margin: 0px !important; position: absolute !important; left: -45.3678% !important; top: 0% !important; max-height: none !important" class="layout-placeholder-image" data-element-type="image" data-element-id="img-1772037140867-i28lkhj3e" data-zappy-original-width="367.3124694824219" data-zappy-original-height="314.83123779296875" data-zappy-zoom="1"></div></div>
+    <div data-zappy-media-grid-item="true" class="zappy-grid-item-media-only" style="position: relative; display: block; overflow: hidden !important; height: 314.869px !important;" data-zappy-original-height="314.8687438964844"><div data-zappy-zoom-wrapper="true" data-element-id="img-1772037140867-n71jyk0bz" data-element-type="image" data-zappy-zoom-wrapper-width="367px" data-zappy-zoom-wrapper-height="315px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 367px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 315px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="layout-image-1772037140739-dfohkcu4p" data-context="תיאור תמונה 3" src="/assets/business-general-service-upload-1772037159967.webp" alt="תיאור תמונה 3" style="display: block !important; border-radius: 8px; object-position: 50% 50%; width: 114.441% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; margin: 0px !important; position: absolute !important; left: -7.22071% !important; top: 0% !important; max-height: none !important" class="layout-placeholder-image" data-element-type="image" data-element-id="img-1772037140867-n71jyk0bz" data-zappy-original-width="367.3499755859375" data-zappy-original-height="314.8687438964844" data-zappy-zoom="1"></div></div>
   </div>
 </div></section><section class="services-services-section" data-layout-spec="Services-services">
   <div class="services-services-container">
@@ -377,14 +377,14 @@
       
     </div>
     
-    <div class="services-services-grid zappy-preserve-css-grid" style="display: grid; grid-template-columns: 381.325px 381.337px 381.325px;" data-original-item-width="381" data-original-gap="28px" id="zappy-auto-grid-1772110038207-q2bxfo" data-zappy-auto-grid="true"><article class="services-services-card" id="zappy-drop-rzlhaf1ez">
+    <div class="services-services-grid zappy-preserve-css-grid" style="--zappy-grid-cols: 381.325px 381.337px 381.325px; display: grid; grid-template-columns: 381.325px 381.337px 381.325px;" data-original-item-width="381" data-original-gap="28px" id="zappy-auto-grid-1772110038207-q2bxfo" data-zappy-auto-grid="true" data-zappy-explicit-columns="true"><article class="services-services-card" id="zappy-drop-rzlhaf1ez">
         <div class="services-services-card-accent"></div>
-        <h3 class="services-services-card-title" style="" id="zappy-drop-cggr1fer2">ליווי אישי, מבוגרים ונוער</h3>
+        <h3 class="services-services-card-title"  id="zappy-drop-cggr1fer2">ליווי אישי, מבוגרים ונוער</h3>
         <p class="services-services-card-text" id="zappy-drop-39knyrlsk">מפגשים פרטיים שבהם נעבוד יחד על האתגרים שלך דרך שיחה, תרגילי נשימה וחיבור לטבע. המטרה: להעניק לך כלים מעשיים להתמודדות עם קשיים יומיומיים.</p>
-        <p class="services-services-card-secondary" style="" id="zappy-drop-xt748y0qz">מתאים למי שמבקש תמיכה רגשית מותאמת אישית.</p>
+        <p class="services-services-card-secondary"  id="zappy-drop-xt748y0qz">מתאים למי שמבקש תמיכה רגשית מותאמת אישית.</p>
       </article><article class="services-services-card" id="zappy-drop-zdpqsq4hf">
         <div class="services-services-card-accent"></div>
-        <h3 class="services-services-card-title" style="" id="zappy-drop-i40467gjl">כלים להפחתת מתח ולחץ</h3>
+        <h3 class="services-services-card-title"  id="zappy-drop-i40467gjl">כלים להפחתת מתח ולחץ</h3>
         <p class="services-services-card-text" id="zappy-drop-1fng7bxp5">למידת טכניקות נשימה, מדיטציה וחיבור לטבע שמסייעות להרגיע את המערכת העצבית ולהפחית תחושות לחץ. תקבל ארגז כלים שתוכל להשתמש בו בכל מצב.</p>
         <p class="services-services-card-secondary" id="zappy-drop-yrq3e50a6">מתאים למי שחווה חרדה, דאגות או מתח כרוני.</p>
       </article><article class="services-services-card" id="zappy-drop-v4zoz1dou">
@@ -395,17 +395,17 @@
       </article><article class="services-services-card" id="zappy-drop-6oy92zp5j">
         <div class="services-services-card-accent"></div>
         <h3 class="services-services-card-title" id="zappy-drop-epib9d2lg">ליווי בקשרים בינאישיים</h3>
-        <p class="services-services-card-text" style="" id="zappy-drop-tsui8dj6w">חקירה של דפוסי תקשורת, גבולות אישיים ודרכי התמודדות עם קונפליקטים. נעבוד על חיזוק הקשר עם עצמך ועם אחרים.</p>
+        <p class="services-services-card-text"  id="zappy-drop-tsui8dj6w">חקירה של דפוסי תקשורת, גבולות אישיים ודרכי התמודדות עם קונפליקטים. נעבוד על חיזוק הקשר עם עצמך ועם אחרים.</p>
         <p class="services-services-card-secondary" id="zappy-drop-f2x5sx7rb">מתאים למי שמתמודד עם אתגרים בזוגיות, משפחה או עבודה.</p>
       </article><article class="services-services-card" id="zappy-drop-cyq4a2vl5" style="display: flex !important; flex-direction: column !important; min-height: 0px !important; align-items: stretch !important; justify-content: flex-start !important;">
         <div class="services-services-card-accent"></div>
-        <h3 class="services-services-card-title" id="zappy-drop-l2awczi3b" style="">ליווי במעברי חיים</h3>
+        <h3 class="services-services-card-title" id="zappy-drop-l2awczi3b" >ליווי במעברי חיים</h3>
         <div class="zappy-inserted-element" id="zappy-element-1772110075319-k8xe34m4j" data-element-id="zappy-element-1772110075319-k8xe34m4j" data-element-type="paragraph" data-zappy-newly-inserted="true" style="margin-left: auto; margin-right: auto; width: 100% !important; max-width: 100% !important; align-self: start !important;"><p style="font-size: 1rem;" data-element-type="paragraph" data-element-id="zappy-element-1772110075319-k8xe34m4j" id="zappy-element-1772110075319-k8xe34m4j" data-zappy-newly-inserted="true" class="">
 
 תמיכה בתקופות של שינוי - מעבר דירה, החלפת עבודה, אובדן, או כל מעבר משמעותי. נעבוד על עיבוד הרגשות ומציאת משמעות בתהליך. 
 
 </p></div>
-        <p class="services-services-card-secondary" style="" id="zappy-drop-kflu5wvyx">מתאים למי שעובר תקופת מעבר או שינוי משמעותי.</p>
+        <p class="services-services-card-secondary"  id="zappy-drop-kflu5wvyx">מתאים למי שעובר תקופת מעבר או שינוי משמעותי.</p>
       </article><article class="services-services-card" id="zappy-drop-ldeultivw">
         <div class="services-services-card-accent"></div>
         <h3 class="services-services-card-title" id="zappy-drop-w45pd6x3p">מיומנויות ויסות רגשי</h3>
@@ -551,29 +551,116 @@
 
     <script>
     (function(){
-      if(window.innerWidth>768)return;
-      function fixZW(){
+      var _applied=false;
+      function _isHeroBg(w){var img=w.querySelector('img');if(img&&(img.getAttribute('data-hero-bg')==='true'||img.getAttribute('data-hero-background')==='true'))return true;var p=(w.style.position||'').replace(/\s*!important\s*/g,'').trim();var ww=(w.style.width||'').replace(/\s*!important\s*/g,'').trim();var hh=(w.style.height||'').replace(/\s*!important\s*/g,'').trim();return p==='absolute'&&ww==='100%'&&hh==='100%';}
+      function fixDesktopWrappers(){
+        // No-op: desktop wrapper restoration is handled by ZAPPY_PUBLISHED_ZOOM_WRAPPER_RUNTIME
+        // in script.js (restoreWrapperDimensions). The old inflation logic here was expanding
+        // small wrappers (e.g. 139px logo wrappers) to their parent width, conflicting with
+        // the correct stored dimensions.
+      }
+      function applyMobile(){
+        if(_applied)return;_applied=true;
         document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
           var cw=w.style.getPropertyValue('width');
           if(!cw||cw==='100%')return;
-          w.style.setProperty('width','100%','important');
-          w.style.setProperty('max-width','100%','important');
-          w.style.setProperty('height','auto','important');
+          if(!w._zappyDesktop)w._zappyDesktop={wStyle:w.getAttribute('style')};
           var img=w.querySelector('img');
-          if(img){
+          if(!img)return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
+          var parentOvf=w.parentElement?((w.parentElement.style.overflow||'')+(window.getComputedStyle(w.parentElement).overflow||'')).trim():'';
+          var inConstrainedParent=parentOvf.indexOf('hidden')!==-1||parentOvf.indexOf('clip')!==-1;
+          if(inConstrainedParent){
+            w.style.setProperty('max-width','100%','important');
+          }else{
+            w.style.setProperty('width','100%','important');
+            w.style.setProperty('max-width','100%','important');
+          }
+          if(mobileSrc)img.src=mobileSrc;
+          var pos=mobilePos||img.style.getPropertyValue('object-position')||'50% 50%';
+          if(mobileZoom>1){
+            var wH=w.getAttribute('data-zappy-zoom-wrapper-height');
+            w.style.setProperty('height',wH||'200px','important');
+            img.style.setProperty('position','relative','important');
+            img.style.setProperty('width','100%','important');
+            img.style.setProperty('height','auto','important');
+            img.style.setProperty('min-height','100%','important');
+            img.style.setProperty('max-width','none','important');
+            img.style.setProperty('max-height','none','important');
+            img.style.setProperty('object-fit','cover','important');
+            img.style.setProperty('left','0','important');
+            img.style.setProperty('top','0','important');
+            img.style.setProperty('object-position',pos,'important');
+            img.style.setProperty('transform','scale('+mobileZoom+')','important');
+            img.style.setProperty('transform-origin',pos,'important');
+          }else{
+            if(!inConstrainedParent)w.style.setProperty('height','auto','important');
             img.style.setProperty('position','relative','important');
             img.style.setProperty('width','100%','important');
             img.style.setProperty('height','auto','important');
             img.style.setProperty('max-width','100%','important');
-            img.style.setProperty('max-height','400px','important');
+            img.style.setProperty('max-height',inConstrainedParent?'none':'400px','important');
             img.style.setProperty('object-fit','cover','important');
             img.style.setProperty('left','0','important');
             img.style.setProperty('top','0','important');
+            img.style.setProperty('transform','none','important');
+            if(mobilePos)img.style.setProperty('object-position',pos,'important');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
+          if(zw&&!_isHeroBg(zw))return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
+          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
+          if(mobileSrc)img.src=mobileSrc;
+          if(mobilePos)img.style.setProperty('object-position',mobilePos,'important');
+          if(mobileZoom>1){
+            img.style.setProperty('transform','scale('+mobileZoom+')','important');
+            img.style.setProperty('transform-origin',mobilePos||'50% 50%','important');
+            var p=img.parentElement;
+            if(p)p.style.setProperty('overflow','hidden','important');
           }
         });
       }
-      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fixZW);
-      else setTimeout(fixZW,50);
+      function revertDesktop(){
+        if(!_applied)return;_applied=false;
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          if(w._zappyDesktop&&w._zappyDesktop.wStyle!=null){w.setAttribute('style',w._zappyDesktop.wStyle);}
+          var img=w.querySelector('img');
+          if(img&&img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
+          if(zw&&!_isHeroBg(zw))return;
+          if(img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        _fixHeroBgWrappers();
+        fixDesktopWrappers();
+      }
+      function _fixHeroBgWrappers(){var isMob=window.innerWidth<=768;document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){if(!_isHeroBg(w))return;w.style.setProperty('position','absolute','important');w.style.setProperty('top','0','important');w.style.setProperty('left','0','important');w.style.setProperty('width','100%','important');w.style.setProperty('height','100%','important');w.style.setProperty('max-width','none','important');w.style.setProperty('overflow','hidden','important');w.setAttribute('data-zappy-zoom-wrapper-width-mode','full');var img=w.querySelector('img');if(img){img.style.setProperty('width','100%','important');img.style.setProperty('height','100%','important');img.style.setProperty('object-fit','cover','important');img.style.setProperty('position','relative','important');img.style.setProperty('top','0','important');img.style.setProperty('left','0','important');img.style.setProperty('max-width','none','important');img.style.setProperty('max-height','none','important');img.style.setProperty('display','block','important');if(isMob){var mSrc=img.getAttribute('data-zappy-mobile-src');var mPos=img.getAttribute('data-zappy-mobile-object-position');var mZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));if(mSrc){if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};img.src=mSrc;}if(mPos)img.style.setProperty('object-position',mPos,'important');if(mZoom>1){img.style.setProperty('transform','scale('+mZoom+')','important');img.style.setProperty('transform-origin',mPos||'50% 50%','important');}}}});}
+      function init(){
+        _fixHeroBgWrappers();
+        var mq=window.matchMedia('(max-width:768px)');
+        function onChange(e){if(e.matches)applyMobile();else revertDesktop();}
+        if(mq.matches)applyMobile();
+        else fixDesktopWrappers();
+        try{mq.addEventListener('change',onChange);}catch(e){mq.addListener(onChange);}
+      }
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+      else setTimeout(init,50);
     })();
     </script>
 </body>

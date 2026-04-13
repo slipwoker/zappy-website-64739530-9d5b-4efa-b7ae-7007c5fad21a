@@ -258,8 +258,8 @@
       .sub-menu a:hover { background-color: #f5f5f5; }
       /* RTL (Hebrew/Arabic) dropdown positioning */
       [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
-      /* Hide empty dropdown menus */
-      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Hide empty dropdown menus (exclude catalog sub-menus that use <a> children instead of <li>) */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))):not(:has(> a)), .sub-menu:not(:has(li)):not(:has(> a)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
       /* Desktop: show submenu on Menu Group hover */
       li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
       /* Menu Group title styling */
@@ -268,7 +268,7 @@
       /* ========== MOBILE SUBMENU STYLES ========== */
       @media (max-width: 768px) {
         .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
-        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        .sub-menu.mobile-expanded { max-height: 60vh !important; overflow-y: auto !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
         [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
         /* Disable hover behavior on mobile */
         .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
@@ -317,7 +317,7 @@
   <div class="nav-container">
     <div class="nav-brand">
       <a href="/" class="logo-link" data-nav-menu-item="true">
-        <img src="/assets/logo-1773571074328-aaohd5.webp?v=1773571074688-r6ija1" alt="לב הטבע" class="logo zappy-editable-image" data-image-type="logo" data-original-position="static" style="position: relative;">
+        <img src="/assets/logo-1773571074328-aaohd5.webp?v=1773571074688-r6ija1" alt="לב הטבע" class="logo" data-image-type="logo" >
       </a>
     </div>
     
@@ -331,9 +331,9 @@
   
   <main>
     <section class="about-story-section" data-layout-spec="About-story" id="zappy-section-0">
-  <div class="about-story-container zappy-preserve-css-grid" style="display: grid; grid-template-columns: 570px 570px;" id="zappy-auto-grid-1771856756212-5za0c4" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="570" data-original-gap="60px"><div class="about-story-content">
+  <div class="about-story-container zappy-preserve-css-grid" style="display: grid; --zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr));" id="zappy-auto-grid-1771856756212-5za0c4" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="570" data-original-gap="60px" data-zappy-explicit-columns="true"><div class="about-story-content">
       <h1>קצת עלי&nbsp;</h1>
-      <p style="">שלום, שמי אורון ברבר בן 46, נשוי באושר + 3 מקסימים.&nbsp;<br><br>אני בן למשפחה חקלאית שורשית, סיימתי שירות צבאי קרבי, טיול גדול של
+      <p >שלום, שמי אורון ברבר בן 46, נשוי באושר + 3 מקסימים.&nbsp;<br><br>אני בן למשפחה חקלאית שורשית, סיימתי שירות צבאי קרבי, טיול גדול של
 אחרי צבא ולימודי תואר ראשון באוניברסיטת בן גוריון.<br><br>כל חיי הבוגרים עבדתי בהייטק, הייתי חדור מוטיבציה, מאוד משימתי, עובד מצטיין, 
 
 יזם פעיל,
@@ -346,11 +346,11 @@
       
       <div class="about-story-approach">
         <h3>מה אני בעצם עושה</h3>
-        <p style="">ליווי, תמיכה, טיפול וריפוי מבוססים טבע, נשימה ומים טובים.<br><br>אני מלווה יחידים, זוגות וקבוצות בתהליכים מעצימים, תוך שימוש במגוון כלים ופרקטיקות מעולמות הדימיון המודרך, קונסטלציה משפחתית, הטבע תרפיה, הנשימה, אמבטיות קרח וחשיפה לקור, ציפה וחוסר משקל, פילוסופיה ועוד.&nbsp;<br><br>.</p>
+        <p >ליווי, תמיכה, טיפול וריפוי מבוססים טבע, נשימה ומים טובים.<br><br>אני מלווה יחידים, זוגות וקבוצות בתהליכים מעצימים, תוך שימוש במגוון כלים ופרקטיקות מעולמות הדימיון המודרך, קונסטלציה משפחתית, הטבע תרפיה, הנשימה, אמבטיות קרח וחשיפה לקור, ציפה וחוסר משקל, פילוסופיה ועוד.&nbsp;<br><br>.</p>
       </div>
     </div><div class="about-story-image-wrapper">
       <div class="about-story-image-frame">
-        <img data-placeholder="about-story-image-1" data-context="A serene, professional therapy space with natural light streaming through a window, soft comfortable seating, green plants, and calming neutral tones. The image should convey safety, warmth, and professional care in a mental health therapy setting. Natural elements like water features or nature views visible through windows. Peaceful, inviting atmosphere for emotional wellness and therapy." width="600" height="800" src="/assets/business-general-service-upload-1771767103728.webp" alt="מרחב טיפולי שקט ומזמין עם אור טבעי וצמחייה" data-element-type="image" data-element-id="img-1771767047032-phszx6i7e" class="zappy-editable-image" data-original-position="static" style="position: relative; object-fit: contain; object-position: 50% 50%; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; margin-top: 20px; margin-right: auto !important; margin-bottom: 20px; margin-left: auto !important;" data-zappy-zoom="1">
+        <img data-placeholder="about-story-image-1" data-context="A serene, professional therapy space with natural light streaming through a window, soft comfortable seating, green plants, and calming neutral tones. The image should convey safety, warmth, and professional care in a mental health therapy setting. Natural elements like water features or nature views visible through windows. Peaceful, inviting atmosphere for emotional wellness and therapy." width="600" height="800" src="/assets/business-general-service-upload-1771767103728.webp" alt="מרחב טיפולי שקט ומזמין עם אור טבעי וצמחייה" data-element-type="image" data-element-id="img-1771767047032-phszx6i7e" class="zappy-editable-image" style="object-fit: contain; object-position: 50% 50%; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; margin-top: 20px; margin-right: auto !important; margin-bottom: 20px; margin-left: auto !important;" data-zappy-zoom="1">
       </div>
     </div></div>
 </section>
@@ -362,53 +362,53 @@
       <p>כל מפגש מבוסס על עקרונות מנחים שמאפשרים תהליך בטוח, מכבד ומתקדם בקצב שלך</p>
     </div>
     
-    <div class="about-values-grid zappy-preserve-css-grid zappy-vertical-grid" style="display: grid; --zappy-grid-cols: repeat(4, minmax(0, 1fr));" data-original-item-width="586" data-original-gap="28px" data-zappy-explicit-columns="true"><article class="about-values-card">
+    <div class="about-values-grid zappy-preserve-css-grid" style="display: grid; --zappy-grid-cols: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(4, minmax(0, 1fr))" data-original-item-width="586" data-original-gap="28px" data-zappy-explicit-columns="true"><article class="about-values-card">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="">מסגרת בטיחות רגשית</h3>
-          <p style="">כל מפגש מתחיל בהסכמה ברורה על המטרות והגבולות. אני מקפיד על קצב שמתאים לך, ללא לחץ או דחיפה לשתף מעבר למה שמגיע ונמצא באותו רגע.</p>
+          <h3 >מסגרת בטיחות רגשית</h3>
+          <p >כל מפגש מתחיל בהסכמה ברורה על המטרות והגבולות. אני מקפיד על קצב שמתאים לך, ללא לחץ או דחיפה לשתף מעבר למה שמגיע ונמצא באותו רגע.</p>
         </div>
       </article><article class="about-values-card">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="">נוכחות אוהבת&nbsp;</h3>
-          <p style="">הבסיס לכל תהליך, כוח אמיתי של ריפוי.&nbsp;<br><br>הנוכחות האוהבת מרפאה את החלקים הפצועים והעזובים, ומאפשרת לתת מקום וזמן.&nbsp;</p>
+          <h3 >נוכחות אוהבת&nbsp;</h3>
+          <p >הבסיס לכל תהליך, כוח אמיתי של ריפוי.&nbsp;<br><br>הנוכחות האוהבת מרפאה את החלקים הפצועים והעזובים, ומאפשרת לתת מקום וזמן.&nbsp;</p>
         </div>
       </article><article class="about-values-card">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="">הקשבה - ללכת בעקבות</h3>
-          <p style="">הקצב שלך הוא הקצב שלנו. אני מקשיב בלב, בעיניים ובאוזניים, מכבד את החוויה הייחודית שלך, ומתאם כל כלי טיפולי לצרכים האישיים שלך.</p>
+          <h3 >הקשבה - ללכת בעקבות</h3>
+          <p >הקצב שלך הוא הקצב שלנו. אני מקשיב בלב, בעיניים ובאוזניים, מכבד את החוויה הייחודית שלך, ומתאם כל כלי טיפולי לצרכים האישיים שלך.</p>
         </div>
       </article><article class="about-values-card">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="">התקדמות לעומק</h3>
-          <p style="">כל מפגש מסתיים בצעד קטן ומוחשי פנימה. תובנות, כלים פשוטים, הצלחות, צעדים קטנים לתוך.</p>
+          <h3 >התקדמות לעומק</h3>
+          <p >כל מפגש מסתיים בצעד קטן ומוחשי פנימה. תובנות, כלים פשוטים, הצלחות, צעדים קטנים לתוך.</p>
         </div>
       </article><article class="about-values-card" style="background-color: rgb(255, 255, 255) !important;">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="cursor: text;">טבע&nbsp;</h3>
-          <p style="cursor: text;">הטבע בוא השותף לתהליך. כל מה שמתקיים בטבע מתקיים בתוכנו, אני טבע, את.ה טבע, הכל מחובר וטבעי.</p>
+          <h3 >טבע&nbsp;</h3>
+          <p >הטבע בוא השותף לתהליך. כל מה שמתקיים בטבע מתקיים בתוכנו, אני טבע, את.ה טבע, הכל מחובר וטבעי.</p>
         </div>
       </article><article class="about-values-card" style="background-color: rgb(255, 255, 255) !important;">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="cursor: text;">עקרון האמת</h3>
-          <p style="cursor: text;">הכל עובר דרך האמת האחת, פנימית ויציבה. הדרך אליה לפעמים ארוכה וקשה, אבל תמיד נשאף להגיע אליה.&nbsp;</p>
+          <h3 >עקרון האמת</h3>
+          <p >הכל עובר דרך האמת האחת, פנימית ויציבה. הדרך אליה לפעמים ארוכה וקשה, אבל תמיד נשאף להגיע אליה.&nbsp;</p>
         </div>
       </article><article class="about-values-card" style="background-color: rgb(255, 255, 255) !important;">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="cursor: text;">מיינדפולנס</h3>
-          <p style="cursor: text;">התבוננות פנימית, עירנות, סקרנות. קבלה של מה שמגיע ללא שיפוטיות או ביקורת&nbsp;</p>
+          <h3 >מיינדפולנס</h3>
+          <p >התבוננות פנימית, עירנות, סקרנות. קבלה של מה שמגיע ללא שיפוטיות או ביקורת&nbsp;</p>
         </div>
       </article><article class="about-values-card" style="background-color: rgb(255, 255, 255) !important;">
         <div class="about-values-card-highlight"></div>
         <div class="about-values-card-content">
-          <h3 style="cursor: text;">ענווה</h3>
-          <p style="cursor: text;">דיבור בגובה העיניים, ללא אגו וללא גאווה. מאפשר מקום לכל אחד לצמוח מתוך הוא עצמו.</p>
+          <h3 >ענווה</h3>
+          <p >דיבור בגובה העיניים, ללא אגו וללא גאווה. מאפשר מקום לכל אחד לצמוח מתוך הוא עצמו.</p>
         </div>
       </article></div>
   </div>
